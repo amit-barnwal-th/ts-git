@@ -1,0 +1,54 @@
+guid: 576d865d-31b8-41db-a5e5-8c5348f0537d
+answer:
+  name: Answer - OR Operation
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  formulas:
+  - id: formula_OR clause
+    name: OR clause
+    expr: "[region] = 'West' or [item type] = 'Pants'"
+    was_auto_generated: false
+  search_query: "[sales] [region] [product] [item type] [formula_OR clause] = true"
+  answer_columns:
+  - name: Total sales
+  - name: item type
+  - name: product
+  - name: region
+  table:
+    table_columns:
+    - column_id: Total sales
+      show_headline: false
+    - column_id: item type
+      show_headline: false
+    - column_id: product
+      show_headline: false
+    - column_id: region
+      show_headline: false
+    ordered_column_ids:
+    - region
+    - product
+    - item type
+    - Total sales
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Total sales
+    - column_id: item type
+    - column_id: product
+    - column_id: region
+    axis_configs:
+    - x:
+      - product
+      "y":
+      - Total sales
+      color:
+      - region
+      - item type
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"product\",\"columnProperty\": {}},{\"columnId\": \"item type\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4dcced48-0fd8-4e3f-92d9-b368e8491584\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"189f5d2b-c595-4b0d-a1f9-dbba3276ae3a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"product\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total sales\",\"colorMap\": [{\"serieName\": \"85f0afd9-3e5c-4155-bee2-f0a539b2b010\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+  display_mode: TABLE_MODE
+  dynamic_name: Answer - OR Operation
