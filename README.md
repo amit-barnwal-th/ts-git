@@ -1,1 +1,1 @@
-# ts-git
+# This is the TS main git folder
