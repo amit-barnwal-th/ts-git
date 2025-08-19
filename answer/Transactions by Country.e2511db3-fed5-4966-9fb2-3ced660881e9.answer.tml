@@ -1,0 +1,36 @@
+guid: e2511db3-fed5-4966-9fb2-3ced660881e9
+answer:
+  name: Transactions by Country
+  tables:
+  - id: Banking_Model
+    name: Banking_Model
+    fqn: 7e2dfb77-be1a-49d0-8fbb-a61b53141b5b
+  search_query: "[Tran Amount] [Country]"
+  answer_columns:
+  - name: Country
+  - name: Total Tran Amount
+  table:
+    table_columns:
+    - column_id: Country
+      show_headline: false
+    - column_id: Total Tran Amount
+      show_headline: false
+    ordered_column_ids:
+    - Country
+    - Total Tran Amount
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Country
+    - column_id: Total Tran Amount
+    axis_configs:
+    - x:
+      - Country
+      "y":
+      - Total Tran Amount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"Total Tran Amount\",\"columnProperty\": {}},{\"columnId\": \"Country\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6d72817a-0d87-407a-a2b8-bcfb32c53ac1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tran Amount\"],\"isOpposite\": false}},{\"id\": \"cebbe9fa-458e-43be-88b0-3bd1ce36a986\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Country\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tran Amount\",\"color\": \"#2E75F0\"},{\"serieName\": \"australia\",\"color\": \"#B094F8\"},{\"serieName\": \"brazil\",\"color\": \"#8C62F5\"},{\"serieName\": \"canada\",\"color\": \"#56D3A8\"},{\"serieName\": \"france\",\"color\": \"#06BF7F\"},{\"serieName\": \"germany\",\"color\": \"#FCD977\"},{\"serieName\": \"india\",\"color\": \"#FCC838\"},{\"serieName\": \"japan\",\"color\": \"#82DFE9\"},{\"serieName\": \"mexico\",\"color\": \"#48D1E0\"},{\"serieName\": \"uk\",\"color\": \"#71A1F4\"},{\"serieName\": \"usa\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
+  dynamic_name: Transactions by Country
