@@ -1,0 +1,23 @@
+[ {
+  "originalGuid" : "576d865d-31b8-41db-a5e5-8c5348f0537d",
+  "mappedGuid" : "1361b311-4ad0-471c-9901-f632cf665aac",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
+  "originalGuid" : "c296cdc6-9e7e-41a8-b54d-12ceec323241",
+  "mappedGuid" : "efe83aff-2a0e-4fee-87c3-c1d399caa407",
+  "counter" : 0,
+  "additionalMapping" : {
+    "ce7e939b-aca7-4bb0-b976-90d34324823f" : "c0c0a2f6-f83c-44b0-8d80-d10b8bf5d689"
+  }
+}, {
+  "originalGuid" : "7e2dfb77-be1a-49d0-8fbb-a61b53141b5b",
+  "mappedGuid" : "1ecb998c-83a1-4b23-971b-a843e170b291",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
+  "originalGuid" : "4bbe2c0a-21b3-481d-a31d-9967e3dee160",
+  "mappedGuid" : "4355462c-33ad-4e4f-952f-6694524c6127",
+  "counter" : 0,
+  "additionalMapping" : { }
+} ]
