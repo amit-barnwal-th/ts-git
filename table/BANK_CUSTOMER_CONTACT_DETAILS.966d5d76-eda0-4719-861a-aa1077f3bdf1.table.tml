@@ -1,0 +1,92 @@
+guid: 966d5d76-eda0-4719-861a-aa1077f3bdf1
+table:
+  name: BANK_CUSTOMER_CONTACT_DETAILS
+  db: BANKINGDB
+  schema: BANK_SCH
+  db_table: BANK_CUSTOMER_CONTACT_DETAILS
+  connection:
+    name: DB_BANKING_Final
+    fqn: f0e39f3c-4df9-4900-a654-fd8f197e98a0
+  columns:
+  - name: ADDR_ID
+    db_column_name: ADDR_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CUST_ID
+    db_column_name: CUST_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PHONE
+    db_column_name: PHONE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: EMAIL
+    db_column_name: EMAIL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PREFERRED_CONTACT
+    db_column_name: PREFERRED_CONTACT
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ADDRESS_TYPE
+    db_column_name: ADDRESS_TYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CITY
+    db_column_name: CITY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: STATE
+    db_column_name: STATE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: COUNTRY
+    db_column_name: COUNTRY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TIME_ZONE
+    db_column_name: TIME_ZONE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LATITUDE
+    db_column_name: LATITUDE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LONGITUDE
+    db_column_name: LONGITUDE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_CUSTOMER_ID
+    destination:
+      name: BANKING_CUSTOMERS
+      fqn: 998bcfde-064f-49b7-ac93-34739cc08dcf
+    "on": "[BANK_CUSTOMER_CONTACT_DETAILS::CUST_ID] = [BANKING_CUSTOMERS::CUST_ID]"
+    type: INNER
+  properties:
+    sage_config:
+      is_sage_enabled: false
