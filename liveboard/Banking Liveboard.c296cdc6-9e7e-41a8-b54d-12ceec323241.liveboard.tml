@@ -39,7 +39,19 @@ liveboard:
       display_mode: CHART_MODE
       dynamic_name: Transactions by Country
     viz_guid: ce7e939b-aca7-4bb0-b976-90d34324823f
+  - id: Viz_2
+    viz_guid: 088446b3-7d4c-442b-8d98-39bc770b6570
+    note_tile:
+      html_parsed_string: "<h2 class=\"theme-module__editor-h2\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">This is version 2 of the liveboard</span></h2><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: MEDIUM
+      x: 0
+      "y": 4
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 0
+      "y": 0
+      height: 4
+      width: 3
