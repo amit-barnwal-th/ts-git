@@ -1,0 +1,135 @@
+guid: 7e2dfb77-be1a-49d0-8fbb-a61b53141b5b
+model:
+  name: Banking_Model
+  description: The Banking_Model worksheet provides a comprehensive overview of customer transactions and personal details. It includes information on customer demographics such as location, contact details, and employment, as well as financial data including annual income, transaction details, and risk assessments. This worksheet is instrumental in analyzing customer behavior, assessing financial risks, and maintaining up-to-date records of banking transactions. (AI generated)
+  model_tables:
+  - name: BANK_CUSTOMER_CONTACT_DETAILS
+    fqn: 966d5d76-eda0-4719-861a-aa1077f3bdf1
+    joins:
+    - with: BANKING_CUSTOMERS
+      referencing_join: FK_CUSTOMER_ID
+  - name: BANK_TRANSACTIONS
+    fqn: 105d33d5-6fed-452f-9cea-c30e8bdea534
+    joins:
+    - with: BANKING_CUSTOMERS
+      referencing_join: FK_CUSTOMER_ID
+  - name: BANKING_CUSTOMERS
+    fqn: 998bcfde-064f-49b7-ac93-34739cc08dcf
+  formulas:
+  - id: formula_Full_Name
+    name: Full_Name
+    expr: concat ( [BANKING_CUSTOMERS::FIRST_NAME] , ' ' , [BANKING_CUSTOMERS::LAST_NAME] )
+  columns:
+  - name: Full Name
+    formula_id: formula_Full_Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Age
+    column_id: BANKING_CUSTOMERS::AGE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      is_hidden: true
+  - name: Gender
+    column_id: BANKING_CUSTOMERS::GENDER
+    properties:
+      column_type: ATTRIBUTE
+      is_hidden: true
+  - name: Marital Status
+    column_id: BANKING_CUSTOMERS::MARITAL_STATUS
+    properties:
+      column_type: ATTRIBUTE
+  - name: Risk Score
+    column_id: BANKING_CUSTOMERS::RISK_SCORE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Residence Status
+    column_id: BANKING_CUSTOMERS::RESIDENCE_STATUS
+    properties:
+      column_type: ATTRIBUTE
+  - name: Annual Income
+    column_id: BANKING_CUSTOMERS::ANNUAL_INCOME
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Account Type
+    column_id: BANKING_CUSTOMERS::ACCOUNT_TYPE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Employment Status
+    column_id: BANKING_CUSTOMERS::EMPLOYMENT_STATUS
+    properties:
+      column_type: ATTRIBUTE
+  - name: Customer Since
+    column_id: BANKING_CUSTOMERS::CUSTOMER_SINCE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Country
+    column_id: BANKING_CUSTOMERS::COUNTRY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Address Type
+    column_id: BANK_CUSTOMER_CONTACT_DETAILS::ADDRESS_TYPE
+    properties:
+      column_type: ATTRIBUTE
+  - name: City
+    column_id: BANK_CUSTOMER_CONTACT_DETAILS::CITY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Email
+    column_id: BANK_CUSTOMER_CONTACT_DETAILS::EMAIL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Phone
+    column_id: BANK_CUSTOMER_CONTACT_DETAILS::PHONE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Latitude
+    column_id: BANK_CUSTOMER_CONTACT_DETAILS::LATITUDE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Longitude
+    column_id: BANK_CUSTOMER_CONTACT_DETAILS::LONGITUDE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Time Zone
+    column_id: BANK_CUSTOMER_CONTACT_DETAILS::TIME_ZONE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Tran Date
+    column_id: BANK_TRANSACTIONS::TRAN_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Tran Description
+    column_id: BANK_TRANSACTIONS::TRAN_DESCRIPTION
+    properties:
+      column_type: ATTRIBUTE
+  - name: Tran Status
+    column_id: BANK_TRANSACTIONS::TRAN_STATUS
+    properties:
+      column_type: ATTRIBUTE
+  - name: Tran Type
+    column_id: BANK_TRANSACTIONS::TRAN_TYPE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Transaction Id
+    column_id: BANK_TRANSACTIONS::TRANSACTION_ID
+    properties:
+      column_type: ATTRIBUTE
+  - name: Tran Amount
+    column_id: BANK_TRANSACTIONS::TRAN_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    sage_config:
+      is_sage_enabled: true

@@ -1,0 +1,36 @@
+guid: 4bbe2c0a-21b3-481d-a31d-9967e3dee160
+answer:
+  name: Transactions by Country
+  tables:
+  - id: Banking_Model
+    name: Banking_Model
+    fqn: 7e2dfb77-be1a-49d0-8fbb-a61b53141b5b
+  search_query: "[Tran Amount] [Country]"
+  answer_columns:
+  - name: Country
+  - name: Total Tran Amount
+  table:
+    table_columns:
+    - column_id: Country
+      show_headline: false
+    - column_id: Total Tran Amount
+      show_headline: false
+    ordered_column_ids:
+    - Country
+    - Total Tran Amount
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: STACKED_COLUMN
+    chart_columns:
+    - column_id: Country
+    - column_id: Total Tran Amount
+    axis_configs:
+    - x:
+      - Country
+      "y":
+      - Total Tran Amount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Tran Amount\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"Country\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dfc63383-5edc-4293-b9c9-67e739f17732\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tran Amount\"],\"isOpposite\": false}},{\"id\": \"ab061903-b369-4e6f-badf-3cd30c1f20ab\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Country\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tran Amount\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
+  dynamic_name: Transactions by Country
